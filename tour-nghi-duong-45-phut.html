@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Tour Nghỉ Dưỡng 45 Phút — 30Shine</title>
+<meta name="description" content="45 phút tái tạo phong độ tại 30Shine: gội massage thư giãn, lấy ráy tai, chăm sóc da đầu trong không gian mát lạnh. Đặt lịch tại 58 salon toàn quốc." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ice-900:#0a2a3a;      /* deep teal navy */
+    --ice-700:#0e5b73;
+    --ice-500:#14a4c4;      /* brand cyan */
+    --ice-300:#7fd8e8;
+    --ice-100:#e6f7fb;
+    --ice-50:#f3fbfd;
+    --ink:#10222b;
+    --muted:#5a6b73;
+    --line:#e2edf1;
+    --white:#ffffff;
+    --accent:#ff7a1a;       /* CTA warm để bật trên nền lạnh */
+    --accent-700:#e8650a;
+    --shadow:0 8px 30px rgba(10,42,58,.10);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Be Vietnam Pro',system-ui,-apple-system,sans-serif;
+    color:var(--ink);background:#dfe9ee;line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* khung mobile, căn giữa khi xem trên desktop */
+  .app{max-width:430px;margin:0 auto;background:var(--white);min-height:100vh;position:relative;overflow:hidden;box-shadow:0 0 60px rgba(0,0,0,.12)}
+  img{display:block;max-width:100%}
+  .section{padding:34px 20px}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ice-500)}
+  h2{font-size:23px;font-weight:800;line-height:1.25;margin:8px 0 14px;color:var(--ice-900)}
+  p.lead{color:var(--muted);font-size:15px}
+
+  /* ---------- TOP BAR ---------- */
+  .topbar{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 18px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .logo{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--ice-900);font-size:17px;letter-spacing:.5px}
+  .flame{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--ice-300),var(--ice-500));
+    display:grid;place-items:center;color:#fff;font-size:13px}
+  .topbar .call{font-size:13px;font-weight:700;color:var(--ice-500);text-decoration:none}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;color:#fff;padding:30px 20px 110px;
+    background:radial-gradient(120% 90% at 80% 0%,var(--ice-500) 0%,var(--ice-700) 45%,var(--ice-900) 100%);
+    overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:
+    radial-gradient(40% 30% at 15% 12%,rgba(255,255,255,.18),transparent 60%);pointer-events:none}
+  .hero .pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600}
+  .hero h1{font-size:32px;line-height:1.15;font-weight:800;margin:16px 0 10px}
+  .hero h1 b{color:var(--ice-300)}
+  .hero p{color:rgba(255,255,255,.86);font-size:15px;max-width:330px}
+  .hero-meta{display:flex;gap:18px;margin-top:18px}
+  .hero-meta div{font-size:13px;color:rgba(255,255,255,.8)}
+  .hero-meta b{display:block;font-size:20px;color:#fff;font-weight:800}
+  .price-tag{margin-top:22px;display:inline-flex;align-items:baseline;gap:8px}
+  .price-tag .now{font-size:30px;font-weight:800;color:#fff}
+  .price-tag .was{font-size:15px;color:rgba(255,255,255,.6);text-decoration:line-through}
+  .price-tag .unit{font-size:14px;color:rgba(255,255,255,.75)}
+
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+    padding:16px;border-radius:14px;font-size:16px;font-weight:700;border:none;cursor:pointer;text-decoration:none}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-700));color:#fff;
+    box-shadow:0 10px 24px rgba(255,122,26,.4)}
+  .btn-ghost{background:transparent;border:1.5px solid var(--ice-500);color:var(--ice-700)}
+  .hero .btn{margin-top:20px}
+
+  /* card nổi đè lên hero */
+  .float-card{margin:-86px 20px 0;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:18px;position:relative;z-index:5}
+  .trust-row{display:flex;justify-content:space-between;text-align:center}
+  .trust-row div{flex:1}
+  .trust-row .n{font-size:20px;font-weight:800;color:var(--ice-700)}
+  .trust-row .l{font-size:11px;color:var(--muted);margin-top:2px}
+  .trust-row .sep{flex:0 0 1px;background:var(--line);margin:4px 0}
+
+  /* ---------- OCCASION ---------- */
+  .occasions{display:flex;flex-direction:column;gap:14px}
+  .occ{display:flex;gap:14px;border-radius:var(--radius);padding:16px;border:1px solid var(--line);position:relative;overflow:hidden}
+  .occ.noon{background:linear-gradient(120deg,#fff8e8,#fff)}
+  .occ.evening{background:linear-gradient(120deg,#eef4ff,#fff)}
+  .occ .em{flex:0 0 46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:24px}
+  .occ.noon .em{background:#ffe9b0}
+  .occ.evening .em{background:#d7e4ff}
+  .occ .body h4{font-size:16px;font-weight:800;color:var(--ice-900)}
+  .occ .body .when{font-size:12px;font-weight:700;color:var(--ice-500);margin:2px 0 6px}
+  .occ .body p{font-size:13px;color:var(--muted)}
+
+  /* ---------- TIMELINE 45' ---------- */
+  .timeline{position:relative;padding-left:8px}
+  .step{position:relative;display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line)}
+  .step:last-child{border-bottom:none}
+  .step .t{flex:0 0 52px;font-weight:800;color:var(--ice-500);font-size:15px;padding-top:2px}
+  .step .ico{flex:0 0 40px;height:40px;border-radius:12px;background:var(--ice-100);display:grid;place-items:center;font-size:19px}
+  .step .body h4{font-size:15px;font-weight:700;color:var(--ice-900)}
+  .step .body p{font-size:13px;color:var(--muted);margin-top:2px}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .gallery .g{border-radius:14px;aspect-ratio:1/1;background:linear-gradient(135deg,var(--ice-100),var(--ice-300));
+    display:grid;place-items:center;color:var(--ice-700);font-size:13px;font-weight:600;text-align:center;padding:10px;border:1px dashed var(--ice-300)}
+  .gallery .g.tall{aspect-ratio:auto;grid-row:span 2}
+
+  /* ---------- BENEFIT GRID ---------- */
+  .benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .benefit{background:var(--ice-50);border:1px solid var(--line);border-radius:14px;padding:14px}
+  .benefit .ico{font-size:22px}
+  .benefit h4{font-size:14px;font-weight:700;margin:8px 0 4px;color:var(--ice-900)}
+  .benefit p{font-size:12px;color:var(--muted)}
+
+  /* ---------- TESTIMONIAL ---------- */
+  .quote{background:var(--ice-900);color:#fff;border-radius:var(--radius);padding:22px}
+  .quote .stars{color:#ffce4d;font-size:15px;letter-spacing:2px}
+  .quote p{font-size:15px;margin:10px 0 14px;line-height:1.55}
+  .quote .who{display:flex;align-items:center;gap:10px}
+  .quote .av{width:38px;height:38px;border-radius:50%;background:var(--ice-500);display:grid;place-items:center;font-weight:700}
+  .quote .who b{font-size:14px}.quote .who span{font-size:12px;color:rgba(255,255,255,.6);display:block}
+
+  /* ---------- PRICE CARD ---------- */
+  .pricecard{border:2px solid var(--ice-500);border-radius:var(--radius);overflow:hidden}
+  .pricecard .head{background:var(--ice-500);color:#fff;padding:16px 18px;display:flex;justify-content:space-between;align-items:center}
+  .pricecard .head b{font-size:17px}
+  .pricecard .head .p{font-size:22px;font-weight:800}
+  .pricecard ul{list-style:none;padding:16px 18px}
+  .pricecard li{display:flex;gap:10px;padding:7px 0;font-size:14px}
+  .pricecard li::before{content:"✓";color:var(--ice-500);font-weight:800}
+  .note{font-size:12px;color:var(--accent-700);background:#fff5ec;border:1px dashed var(--accent);border-radius:10px;padding:8px 12px;margin-top:12px}
+
+  /* ---------- FORM ---------- */
+  .form{background:var(--ice-50);border-radius:var(--radius);padding:20px;border:1px solid var(--line)}
+  .field{margin-bottom:12px}
+  .field label{font-size:13px;font-weight:600;color:var(--ice-900);display:block;margin-bottom:6px}
+  .field input,.field select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:11px;font-size:15px;font-family:inherit;background:#fff}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--ice-500)}
+
+  /* ---------- FAQ ---------- */
+  details{border-bottom:1px solid var(--line);padding:14px 0}
+  summary{font-size:15px;font-weight:600;color:var(--ice-900);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+  summary::after{content:"+";color:var(--ice-500);font-weight:800;font-size:20px}
+  details[open] summary::after{content:"–"}
+  details p{font-size:14px;color:var(--muted);margin-top:8px}
+
+  /* ---------- FOOTER ---------- */
+  .footer{background:var(--ice-900);color:rgba(255,255,255,.7);padding:30px 20px 110px;font-size:13px}
+  .footer .logo{color:#fff;margin-bottom:12px}
+  .footer a{color:rgba(255,255,255,.7);text-decoration:none;display:block;padding:4px 0}
+
+  /* ---------- STICKY CTA ---------- */
+  .sticky{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:50;
+    background:#fff;border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    display:flex;gap:12px;align-items:center;box-shadow:0 -6px 24px rgba(10,42,58,.1)}
+  .sticky .pp{flex:1}
+  .sticky .pp .now{font-size:18px;font-weight:800;color:var(--ice-900);line-height:1}
+  .sticky .pp .lbl{font-size:11px;color:var(--muted)}
+  .sticky .btn{width:auto;flex:0 0 auto;padding:14px 26px}
+  .spacer{height:90px}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="logo"><span class="flame">▲</span> 30SHINE</div>
+    <a class="call" href="tel:1900272703">☎ 1900 27 27 03</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <span class="pill">❄ Nghỉ trưa &amp; tan làm</span>
+    <h1>Tranh thủ <b>45 phút</b> nghỉ trưa hoặc tan làm để nạp lại năng lượng</h1>
+    <p>Không cần xin nghỉ, không cần cuối tuần. Gội massage · lấy ráy tai · chăm sóc da đầu — vừa đúng giờ trưa, vừa đúng lúc tan ca.</p>
+
+    <div class="hero-meta">
+      <div><b>45'</b>liệu trình</div>
+      <div><b>58</b>salon toàn quốc</div>
+      <div><b>4.9★</b>đánh giá</div>
+    </div>
+
+    <div class="price-tag">
+      <span class="now">[GIÁ]đ</span>
+      <span class="was">[GIÁ GỐC]đ</span>
+      <span class="unit">/ buổi</span>
+    </div>
+
+    <a href="#datlich" class="btn btn-primary">Đặt lịch tour ngay →</a>
+  </header>
+
+  <!-- FLOAT TRUST CARD -->
+  <div class="float-card">
+    <div class="trust-row">
+      <div><div class="n">100%</div><div class="l">Stylist chứng chỉ</div></div>
+      <div class="sep"></div>
+      <div><div class="n">Khăn nóng</div><div class="l">Vô trùng riêng</div></div>
+      <div class="sep"></div>
+      <div><div class="n">Cam kết</div><div class="l">Hài lòng 100%</div></div>
+    </div>
+  </div>
+
+  <!-- OCCASIONS -->
+  <section class="section">
+    <span class="eyebrow">2 thời điểm vàng</span>
+    <h2>Chọn lúc nào hợp với bạn?</h2>
+    <div class="occasions">
+      <div class="occ noon">
+        <div class="em">☀️</div>
+        <div class="body">
+          <h4>Nghỉ trưa nạp lại pin</h4>
+          <div class="when">11:30 – 13:30 · gần văn phòng</div>
+          <p>Trốn cái nóng giữa trưa vào cabin mát lạnh, chợp mắt 45 phút rồi quay lại làm việc tỉnh táo, sạch sẽ.</p>
+        </div>
+      </div>
+      <div class="occ evening">
+        <div class="em">🌆</div>
+        <div class="body">
+          <h4>Tan làm xả căng thẳng</h4>
+          <div class="when">17:30 – 21:00 · trên đường về</div>
+          <p>Ghé 30Shine sau giờ làm, đánh tan mệt mỏi cổ vai gáy, gặp gỡ bạn bè hay về nhà với tinh thần nhẹ tênh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section" style="padding-top:6px">
+    <span class="eyebrow">Trải nghiệm 45 phút</span>
+    <h2>Tour của bạn diễn ra thế nào?</h2>
+    <div class="timeline">
+      <div class="step"><div class="t">0–10'</div><div class="ico">💆</div><div class="body"><h4>Gội & massage da đầu</h4><p>Massage cổ vai gáy thư giãn, đánh tan căng thẳng sau ngày dài.</p></div></div>
+      <div class="step"><div class="t">10–25'</div><div class="ico">👂</div><div class="body"><h4>Lấy ráy tai chuẩn y khoa</h4><p>Dụng cụ vô trùng riêng, thao tác nhẹ nhàng, an toàn tuyệt đối.</p></div></div>
+      <div class="step"><div class="t">25–38'</div><div class="ico">🧖</div><div class="body"><h4>Chăm sóc & ủ da đầu</h4><p>Đắp khăn nóng, dưỡng ẩm, phục hồi da đầu khỏe mạnh.</p></div></div>
+      <div class="step"><div class="t">38–45'</div><div class="ico">✨</div><div class="body"><h4>Tạo kiểu hoàn thiện</h4><p>Sấy tạo kiểu nhẹ, bước ra cửa với diện mạo tươi mới.</p></div></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" style="padding-top:6px">
+    <span class="eyebrow">Không gian</span>
+    <h2>Cabin riêng tư, mát lạnh</h2>
+    <div class="gallery">
+      <div class="g tall">[Ảnh không gian salon — dọc]</div>
+      <div class="g">[Ảnh ghế massage]</div>
+      <div class="g">[Ảnh lấy ráy tai]</div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section" style="background:var(--ice-50)">
+    <span class="eyebrow">Vì sao chọn 30Shine</span>
+    <h2>Khác biệt của tour nghỉ dưỡng</h2>
+    <div class="benefits">
+      <div class="benefit"><div class="ico">🧴</div><h4>Dụng cụ riêng</h4><p>Mỗi khách 1 bộ vô trùng, không dùng chung.</p></div>
+      <div class="benefit"><div class="ico">❄️</div><h4>Không gian mát</h4><p>Cabin điều hòa, ánh sáng dịu, nhạc thư giãn.</p></div>
+      <div class="benefit"><div class="ico">⏱️</div><h4>Đúng giờ</h4><p>Đặt lịch trước, không phải chờ đợi.</p></div>
+      <div class="benefit"><div class="ico">📍</div><h4>Gần bạn</h4><p>58 salon toàn quốc, chọn nơi tiện nhất.</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="section">
+    <div class="quote">
+      <div class="stars">★★★★★</div>
+      <p>"Trưa nào nghỉ được là tôi trốn vào đây 45 phút, mát lạnh chợp mắt xong chiều làm việc tỉnh hẳn. Hôm nào tan làm mệt cũng ghé. Như có chỗ sạc pin riêng."</p>
+      <div class="who"><div class="av">A</div><div><b>Anh Tuấn, 34 · dân văn phòng</b><span>Khách hàng tại Hà Nội</span></div></div>
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section class="section" id="bang-gia">
+    <span class="eyebrow">Bảng giá</span>
+    <h2>Trọn gói Tour 45 phút</h2>
+    <div class="pricecard">
+      <div class="head"><b>Tour Nghỉ Dưỡng</b><span class="p">[GIÁ]đ</span></div>
+      <ul>
+        <li>Gội đầu + massage cổ vai gáy</li>
+        <li>Lấy ráy tai chuẩn y khoa</li>
+        <li>Ủ & chăm sóc da đầu</li>
+        <li>Sấy tạo kiểu hoàn thiện</li>
+        <li>Khăn nóng + nước uống miễn phí</li>
+      </ul>
+    </div>
+    <div class="note">⚠ Điền giá thật &amp; ưu đãi vào các ô [GIÁ]. Không để placeholder khi lên trang chính thức.</div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="section" id="datlich" style="background:var(--ice-50)">
+    <span class="eyebrow">Đặt lịch</span>
+    <h2>Giữ chỗ trong 30 giây</h2>
+    <form class="form" onsubmit="alert('Demo — kết nối API booking 30Shine ở đây');return false">
+      <div class="field"><label>Họ tên</label><input type="text" placeholder="Nguyễn Văn A" required></div>
+      <div class="field"><label>Số điện thoại</label><input type="tel" placeholder="09xx xxx xxx" required></div>
+      <div class="field"><label>Chọn salon</label>
+        <select required><option value="">— Chọn salon gần bạn —</option><option>Hà Nội</option><option>TP.HCM</option><option>Đà Nẵng</option><option>Khác…</option></select>
+      </div>
+      <div class="field"><label>Khung giờ mong muốn</label>
+        <select required><option value="">— Chọn khung giờ —</option><option>☀️ Nghỉ trưa (11:30–13:30)</option><option>🌆 Tan làm (17:30–21:00)</option><option>Khung giờ khác…</option></select>
+      </div>
+      <button class="btn btn-primary" type="submit">Xác nhận đặt lịch</button>
+    </form>
+  </section>
+
+  <!-- FAQ (tốt cho SEO/schema) -->
+  <section class="section">
+    <span class="eyebrow">Hỏi đáp</span>
+    <h2>Câu hỏi thường gặp</h2>
+    <details open><summary>Tour 45 phút gồm những gì?</summary><p>Gội massage, lấy ráy tai chuẩn y khoa, chăm sóc da đầu và sấy tạo kiểu — trọn gói trong 45 phút, vừa khít giờ nghỉ trưa hoặc lúc tan làm.</p></details>
+    <details><summary>Nghỉ trưa ghé có kịp về làm không?</summary><p>Liệu trình gọn đúng 45 phút. Đặt lịch trước khung 11:30–13:30, bạn vào là được phục vụ ngay, không phải chờ, kịp quay lại văn phòng.</p></details>
+    <details><summary>Buổi tối tan làm còn mở không?</summary><p>Salon phục vụ tới 21:00. Tan làm ghé thoải mái, có chỗ thư giãn cổ vai gáy trước khi về nhà.</p></details>
+    <details><summary>Lấy ráy tai có an toàn không?</summary><p>Mỗi khách dùng 1 bộ dụng cụ vô trùng riêng, thao tác bởi nhân viên được đào tạo, an toàn tuyệt đối.</p></details>
+    <details><summary>Giá bao nhiêu?</summary><p>[Điền giá thật] — xem chi tiết tại mục Bảng giá phía trên.</p></details>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="logo"><span class="flame">▲</span> 30SHINE</div>
+    <a href="#">Hệ thống 58 salon</a>
+    <a href="#">Chính sách & cam kết</a>
+    <a href="tel:1900272703">Hotline: 1900 27 27 03</a>
+    <p style="margin-top:14px">© 2026 30Shine. Cắt tóc · Gội đầu · Lấy ráy tai.</p>
+  </footer>
+
+  <div class="spacer"></div>
+
+  <!-- STICKY CTA -->
+  <div class="sticky">
+    <div class="pp"><div class="now">[GIÁ]đ</div><div class="lbl">Tour 45' · trọn gói</div></div>
+    <a href="#datlich" class="btn btn-primary">Đặt lịch</a>
+  </div>
+
+</div>
+</body>
+</html>
