@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Thera Studio 1 Ngủ — Căn Hộ Phục Hồi Cổ Vai Gáy | 30Shine</title>
+<meta name="description" content="Thera Studio 1 ngủ: căn hộ phục hồi cổ vai gáy riêng tư cho anh em văn phòng. Giường massage SL-Tracking 60 chế độ, chỉ từ 125.000đ. Đặt lịch tại 30Shine." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<!-- AOS: hiệu ứng cuộn -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+  /* ===== FONT CHÍNH: GILROY ===== (đặt file .woff2 vào folder /fonts) */
+  @font-face{font-family:'Gilroy';src:url('../fonts/Gilroy-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Gilroy';src:url('../fonts/Gilroy-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:'Gilroy';src:url('../fonts/Gilroy-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+  @font-face{font-family:'Gilroy';src:url('../fonts/Gilroy-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:'Gilroy';src:url('../fonts/Gilroy-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+  @font-face{font-family:'Gilroy';src:url('../fonts/Gilroy-Black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
+
+  :root{
+    --navy:#16245a;        /* heading xanh đậm */
+    --navy2:#1d2f6b;
+    --blue:#2667d6;        /* xanh accent */
+    --blue-bright:#2f80ed;
+    --gold:#f6a623;        /* vàng số / sao */
+    --gold-text:#ffb81c;
+    --sky:#eef4fc;         /* nền icon */
+    --sky-line:#dbe7f7;
+    --ink:#1b2538;
+    --muted:#6a7689;
+    --line:#e4ecf6;
+    --white:#fff;
+    --radius:16px;
+    --shadow:0 8px 26px rgba(22,36,90,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Gilroy','Be Vietnam Pro',system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,#274fa3 0%,#16306f 45%,#0d1f4a 100%);background-attachment:fixed;min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .app{max-width:430px;margin:0 auto;background:var(--white);min-height:100vh;position:relative;overflow:hidden;box-shadow:0 0 60px rgba(0,0,0,.12)}
+  img{display:block;max-width:100%}
+  .section{padding:30px 18px}
+  .script{font-family:'Dancing Script',cursive}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+  .ph{background:linear-gradient(135deg,#cfe0f4,#9fc0e8);border:1px dashed var(--blue);border-radius:12px;display:grid;place-items:center;color:var(--navy);font-size:11px;font-weight:600;text-align:center;padding:8px}
+
+  /* ===== TOP BAR ===== */
+  .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff;border-bottom:1px solid var(--line)}
+  .logo{display:flex;align-items:center;gap:7px;font-weight:900;color:var(--navy);font-size:19px;letter-spacing:.5px;text-decoration:none}
+  .logo-img{height:32px;width:auto;display:block}
+  .flame{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,#6db6f0,var(--blue));display:grid;place-items:center;color:#fff;font-size:12px}
+  .tb-right{display:flex;align-items:center;gap:12px}
+  .login{font-size:13px;font-weight:700;color:var(--blue);border:1.5px solid var(--blue);padding:7px 16px;border-radius:999px;text-decoration:none}
+  .ham{display:flex;flex-direction:column;gap:4px;cursor:pointer}
+  .ham span{width:22px;height:2.5px;background:var(--navy);border-radius:2px}
+
+  /* ===== HERO ===== */
+  .hero{background:linear-gradient(180deg,#1d3f86 0%,#16306f 30%,#13265e 100%);padding:0 0 22px;color:#fff;margin:12px;border-radius:20px;overflow:hidden}
+  .hero picture{display:block;width:100%}
+  .hero-art-img{width:100%;display:block;background:#16306f;min-height:60px}
+  /* ảnh thật + fallback khi thiếu file */
+  img.land{object-fit:cover;display:block}
+  .img-missing{background:linear-gradient(135deg,#cfe0f4,#9fc0e8)!important;border:1px dashed var(--blue);display:grid!important;place-items:center;color:var(--navy);font-size:11px;font-weight:700;text-align:center;padding:8px;line-height:1.3}
+  .hero-art-img.img-missing{min-height:300px}
+  /* collage + máy bay */
+  .collage{position:relative;height:150px;display:flex;gap:3px;padding:10px 10px 0;overflow:hidden}
+  .collage .c{flex:1;border-radius:8px;background:linear-gradient(135deg,#dce8f7,#a9c6e9);display:grid;place-items:center;color:#3a5285;font-size:9px;text-align:center}
+  .plane{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);font-size:96px;line-height:1;filter:drop-shadow(0 8px 14px rgba(0,0,0,.3));pointer-events:none}
+  /* khối thương hiệu */
+  .brand{position:relative;margin:0 12px;border-radius:14px;overflow:hidden;background:linear-gradient(120deg,#16306f 0%,#1d3f86 50%,#2a5bb0 100%);padding:16px;min-height:150px;display:flex;flex-direction:column;justify-content:center}
+  .brand .welcome{font-size:20px;color:#fff;opacity:.95;line-height:1}
+  .brand .tour{font-style:italic;font-weight:900;color:var(--gold-text);font-size:38px;line-height:.95;text-transform:uppercase;text-shadow:0 3px 0 rgba(0,0,0,.18)}
+  .brand .row45{display:flex;align-items:center;gap:8px;margin-top:4px}
+  .brand .p45{font-size:12px;font-weight:800;letter-spacing:1px;background:rgba(255,255,255,.16);padding:3px 8px;border-radius:6px}
+  .brand .city{font-size:18px;color:#eaf2ff}
+  .brand .book{position:absolute;top:16px;right:16px;background:#fff;color:var(--navy);font-size:11px;font-weight:800;padding:8px 12px;border-radius:999px;text-decoration:none}
+  .brand .window{position:absolute;right:0;bottom:0;width:120px;height:120px;border-top-left-radius:80px;border-bottom-left-radius:14px;background:linear-gradient(135deg,#9fc6f2,#4f86d6);display:grid;place-items:center;color:#16306f;font-size:9px;text-align:center;border:3px solid rgba(255,255,255,.4);border-right:none}
+
+  .hero .h1{font-size:22px;font-weight:900;text-transform:uppercase;text-align:center;margin:20px 16px 8px;line-height:1.25}
+  .hero .desc{font-size:13.5px;font-style:italic;color:rgba(255,255,255,.85);text-align:center;margin:0 22px;line-height:1.5}
+
+  /* rating card */
+  .rating{margin:18px 16px 0;background:#fff;border-radius:14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;padding:14px 18px}
+  .rating .star{font-size:26px;font-weight:900;color:var(--ink);display:flex;align-items:center;gap:4px}
+  .rating .star i{color:var(--gold);font-style:normal;font-size:22px}
+  .rating .sep{width:1px;height:34px;background:var(--line)}
+  .rating .rt{font-size:19px;font-weight:900;color:var(--navy);text-transform:uppercase;line-height:1.1}
+  .rating .rs{font-size:12px;color:var(--muted);font-weight:600}
+
+  /* price card */
+  .pricecard{margin:14px 16px 0;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:16px;position:relative}
+  .pricecard .tab{position:absolute;top:-1px;left:16px;background:var(--gold);color:var(--navy);font-size:15px;font-weight:900;letter-spacing:1.5px;padding:7px 20px;border-radius:0 0 12px 12px;box-shadow:0 4px 10px rgba(246,166,35,.35)}
+  .pricecard .big{font-size:50px;font-weight:900;color:var(--navy);text-align:center;margin:32px 0 14px;line-height:1;letter-spacing:-.5px}
+  .pricecard .big small{font-size:22px;letter-spacing:0}
+  .price-cta{display:flex;gap:10px}
+  .price-cta .btn{flex:1}
+
+  .btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:14px;border-radius:11px;font-size:14px;font-weight:800;border:none;cursor:pointer;text-decoration:none}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 8px 18px rgba(38,103,214,.35)}
+  @keyframes ctaPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+  .pulse{animation:ctaPulse 1.8s ease-in-out infinite}
+  @media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+  .btn-line{background:#fff;border:1.5px solid var(--blue);color:var(--blue)}
+  .btn-navy{background:var(--navy);color:#fff}
+
+  /* badge band */
+  .badge-band{margin:18px 16px 0;background:linear-gradient(90deg,#1d3f86,#2a5bb0);border-radius:12px;display:flex;padding:14px 6px}
+  .badge-band .bb{flex:1;text-align:center;padding:0 6px}
+  .badge-band .bb+.bb{border-left:1px solid rgba(255,255,255,.2)}
+  .badge-band .b{font-size:14px;font-weight:900;color:#fff}
+  .badge-band .s{font-size:9.5px;color:rgba(255,255,255,.8);margin-top:3px;line-height:1.3;text-transform:uppercase}
+
+  /* ===== SECTION HEADING ===== */
+  .shead .e{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
+  .shead .big{font-size:34px;font-weight:900;text-transform:uppercase;line-height:1.15;letter-spacing:.3px;color:var(--navy)}
+  .shead .big .bl{color:var(--blue)}
+  .shead .sub{font-size:22px;color:var(--blue);margin-top:8px}
+
+  /* hero window img cho artboard2 */
+  .win-img{margin:14px 0 18px;width:100%;height:auto;border-radius:16px;box-shadow:var(--shadow)}
+
+  /* ===== PAIN CARDS ===== */
+  .why{display:flex;flex-direction:column;gap:18px}
+  .paincard{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+  .paincard:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(22,36,90,.18)}
+  .pc-photo{order:-1;width:100%;height:210px;object-fit:cover;object-position:center 30%;background:var(--sky)}
+  .pc-text{padding:18px 18px 20px;display:flex;flex-direction:column}
+  .pc-head{display:flex;gap:11px;align-items:center;margin-bottom:13px}
+  .pc-head .num{flex:0 0 34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--blue-bright),var(--blue));color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px;box-shadow:0 5px 12px rgba(38,103,214,.4)}
+  .pc-head h4{font-size:16.5px;font-weight:800;color:var(--navy);line-height:1.25}
+  .pc-text ul{list-style:none;padding:0;margin:0 0 16px}
+  .pc-text li{font-size:13px;color:var(--muted);line-height:1.45;padding-left:18px;position:relative;margin:7px 0}
+  .pc-text li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blue);font-weight:900;font-size:12px}
+  /* CTA pill bấm được */
+  .pc-cta{display:inline-flex;align-items:center;gap:11px;align-self:flex-start;margin-top:auto;background:var(--sky);border:1px solid var(--sky-line);border-radius:999px;padding:8px 20px 8px 8px;text-decoration:none;transition:background .2s,transform .2s}
+  .pc-cta:hover{background:#d7e8fb;transform:scale(1.03)}
+  .pc-cta .ci{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:18px;box-shadow:0 3px 8px rgba(0,0,0,.1)}
+  .pc-cta b{font-size:13.5px;font-weight:900;color:var(--blue);text-transform:uppercase;line-height:1.18}
+
+  /* ===== TIMELINE ===== */
+  .timeline{position:relative;margin-top:6px}
+  .tstep{position:relative;display:flex;gap:12px;padding-left:6px;padding-bottom:18px}
+  .tstep:not(:last-child)::before{content:"";position:absolute;left:33px;top:34px;bottom:-2px;border-left:2px dashed var(--sky-line)}
+  .tcol{flex:0 0 56px;display:flex;flex-direction:column;align-items:center;gap:6px}
+  .tcol .time{background:var(--blue);color:#fff;font-size:12px;font-weight:800;padding:5px 0;width:56px;text-align:center;border-radius:8px}
+  .tcol .buoc{font-size:9px;font-weight:800;color:var(--navy);background:var(--sky);padding:3px 7px;border-radius:5px;letter-spacing:.5px}
+  .tcard{flex:1;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:13px;display:flex;gap:11px}
+  .tcard .ico{flex:0 0 44px;height:44px;border-radius:11px;background:var(--sky);display:grid;place-items:center;font-size:21px}
+  .tcard h4{font-size:14.5px;font-weight:800;color:var(--navy);line-height:1.25}
+  .tcard p{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
+  .tcard ul{list-style:none;padding:0;margin:6px 0 0}
+  .tcard li{font-size:12px;color:var(--muted);line-height:1.4;padding-left:14px;position:relative;margin:5px 0}
+  .tcard li::before{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+
+  /* ===== DIFFERENCE ===== */
+  .diffrow{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+  .diffrow:last-child{border-bottom:none}
+  .diffrow .dimg{flex:0 0 84px;height:84px;border-radius:12px}
+  .diffrow .dnum{font-size:13px;font-weight:900;color:var(--blue)}
+  .diffrow h4{font-size:15px;font-weight:900;color:var(--navy);text-transform:uppercase;margin:1px 0 6px;line-height:1.2}
+  .diffrow ul{list-style:none;padding:0}
+  .diffrow li{font-size:12px;color:var(--muted);padding-left:14px;position:relative;margin:3px 0;line-height:1.45}
+  .diffrow li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+
+  /* ===== FAQ ===== */
+  .faqbubble{width:60px;height:60px;border-radius:16px 16px 16px 4px;background:linear-gradient(135deg,var(--blue-bright),var(--blue));display:grid;place-items:center;color:#fff;font-size:26px;font-weight:900;float:right;margin:-6px 0 0}
+  .faq{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+  .faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:15px 14px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq .q{flex:0 0 34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:900;font-size:13px}
+  .faq summary .qt{flex:1;font-size:14.5px;font-weight:800;color:var(--navy);line-height:1.25}
+  .faq summary .pm{font-size:22px;color:var(--blue);font-weight:900}
+  .faq[open] summary .pm::after{content:"–"}
+  .faq:not([open]) summary .pm::after{content:"+"}
+  .faq .body{padding:0 14px 14px}
+  .faq-item{display:flex;gap:11px;padding:9px 0;border-top:1px solid var(--line)}
+  .faq-item .fi{flex:0 0 40px;height:40px;border-radius:10px;background:var(--sky);display:grid;place-items:center;font-size:19px}
+  .faq-item h5{font-size:14px;font-weight:800;color:var(--navy)}
+  .faq-item p{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.45}
+  .faq-sum{display:flex;gap:9px;background:var(--sky);border-radius:11px;padding:12px;margin-top:10px}
+  .faq-sum .ck{flex:0 0 20px;color:var(--blue);font-size:18px}
+  .faq-sum p{font-size:12px;color:var(--navy);line-height:1.5}
+
+  /* ===== STICKY BOTTOM ===== */
+  .sticky{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;box-shadow:0 -6px 20px rgba(22,36,90,.12)}
+  .sticky .btn{flex:1;flex-direction:column;gap:1px;padding:10px 8px;text-align:center}
+  .sticky .btn .l1{font-size:9.5px;font-weight:700;opacity:.85;white-space:nowrap}
+  .sticky .btn .l2{font-size:14px;font-weight:900;white-space:nowrap;line-height:1.1}
+  .btn-soft{background:var(--sky);color:var(--blue)}
+  .spacer{height:80px}
+  .note{font-size:11px;color:var(--gold-text);background:#fff8ec;border:1px dashed var(--gold);border-radius:10px;padding:8px 12px;margin:14px 16px 0;font-weight:600}
+
+  /* ===== POPUP ĐĂNG NHẬP ===== */
+  .modal-overlay{position:fixed;inset:0;background:rgba(10,20,40,.55);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal-overlay.show{display:flex}
+  .modal{background:#fff;border-radius:16px;max-width:440px;width:100%;padding:30px 26px 26px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.32);animation:modalIn .25s ease-out}
+  @keyframes modalIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .modal .x{position:absolute;top:14px;right:16px;font-size:20px;color:var(--ink);cursor:pointer;background:none;border:none;line-height:1}
+  .modal h3{text-align:center;font-size:22px;font-weight:900;color:var(--navy);letter-spacing:1px;margin-bottom:14px}
+  .modal .ask{text-align:center;color:var(--ink);font-size:15px;margin-bottom:18px}
+  .modal input{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;margin-bottom:16px}
+  .modal input:focus{outline:none;border-color:var(--blue)}
+  .modal .btn-continue{width:100%;padding:14px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;letter-spacing:.5px}
+
+  /* ============ RESPONSIVE: TABLET & DESKTOP ============ */
+  @media (min-width:768px){
+    body{background:#dde8f3}
+    .app{max-width:1000px;box-shadow:0 0 90px rgba(20,40,90,.12)}
+    .section{padding:54px 48px}
+    .topbar{padding:16px 40px}
+    .logo{font-size:21px}
+
+    /* HERO: banner bo góc, có lề */
+    .hero{padding-bottom:46px;margin:24px;border-radius:28px}
+    .hero .h1,.hero .desc,.rating,.pricecard,.badge-band{max-width:640px;margin-left:auto;margin-right:auto}
+    /* banner desktop: rộng full khung, không giới hạn 640 */
+    .hero picture,.hero-art-img{width:100%;max-width:none}
+    .hero-art-img{border-radius:0}
+    .hero .h1{font-size:30px;margin-top:28px}
+    .hero .desc{font-size:15px}
+
+    /* Heading section to hơn */
+    .shead .big{font-size:42px}
+    .shead .sub{font-size:26px}
+
+    /* Banner "Vì sao chọn" thu gọn, căn giữa */
+    .win-img{max-width:820px;margin-left:auto;margin-right:auto}
+
+    /* Pain card → 2 cột chắc chắn (không wrap) */
+    .why{flex-direction:row;gap:24px;align-items:stretch}
+    .paincard{flex:1 1 0;min-width:0}
+    .pc-photo{height:240px}
+    .pc-text{padding:22px 22px 24px}
+    .pc-head h4{font-size:17px}
+
+    /* Timeline → lưới 2×2 (bỏ đường nối dọc) */
+    .timeline{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .tstep{padding-bottom:0}
+    .tstep::before{display:none!important}
+
+    /* Khác biệt → 2 cột */
+    .diffwrap{display:grid;grid-template-columns:1fr 1fr;gap:4px 36px}
+    .diffrow{border-bottom:none;padding:16px 0}
+
+    /* FAQ căn giữa, hẹp dễ đọc */
+    #faq .faq,#faq>p,#faq .shead{max-width:780px}
+
+    /* Thanh sticky gọn giữa màn hình */
+    .sticky{max-width:680px}
+  }
+  @media (min-width:1100px){
+    .app{max-width:1180px}
+    .section{padding:72px 72px}
+    .diffwrap{column-gap:52px}
+    .hero .h1{font-size:33px}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <a class="logo" href="https://30shine.com/"><img src="images/logo.jpg" alt="30Shine" class="logo-img"></a>
+    <div class="tb-right">
+      <a class="login" href="#" onclick="openLogin();return false;">Đăng nhập</a>
+      <div class="ham"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <picture>
+      <source media="(min-width:768px)" srcset="images/hero-desktop.jpg">
+      <img class="hero-art-img" src="images/hero-mobile.jpg" alt="Thera Studio 1 ngủ - căn hộ phục hồi cổ vai gáy - 30Shine" data-label="⬚ hero-mobile.jpg → /images" onerror="imgFallback(this)">
+    </picture>
+
+    <div class="h1">THERA STUDIO 1 NGỦ — XU HƯỚNG "CĂN HỘ PHỤC HỒI" CỔ VAI GÁY ANH EM VĂN PHÒNG</div>
+    <p class="desc">Trải nghiệm không gian "căn hộ" phục hồi sức khỏe riêng tư tuyệt đối. Giải tỏa áp lực "trụ cột", trở về "nhà" nơi anh được là chính mình, tận hưởng dưới làn nước mát lạnh &amp; đầu nhẹ bẫng như mây.</p>
+
+    <!-- rating -->
+    <div class="rating" data-aos="fade-up">
+      <div class="star">4.9<i>★</i></div>
+      <div class="sep"></div>
+      <div><div class="rt">Tận Hưởng</div><div class="rs">— 45 - 60 Phút —</div></div>
+    </div>
+
+    <!-- price -->
+    <div class="pricecard" data-aos="fade-up" data-aos-delay="100">
+      <div class="tab">CHỈ TỪ</div>
+      <div class="big">125.000 <small>VNĐ</small></div>
+      <div class="price-cta">
+        <a href="https://30shine.com/booking?phone=0941497708&salonId=0&step=0" target="_blank" rel="noopener" class="btn btn-blue pulse">ĐẶT SLOT "SỞ HỮU" CĂN HỘ</a>
+        <a href="tel:1900272703" class="btn btn-line">GỌI TƯ VẤN</a>
+      </div>
+    </div>
+
+    <!-- badges -->
+    <div class="badge-band" data-aos="fade-up" data-aos-delay="150">
+      <div class="bb"><div class="b">RIÊNG TƯ</div><div class="s">Căn hộ, nội thất Premium</div></div>
+      <div class="bb"><div class="b">KHÔNG</div><div class="s">Gồng lãi suất</div></div>
+      <div class="bb"><div class="b">CAM KẾT</div><div class="s">Sảng khoái đã đời</div></div>
+    </div>
+  </header>
+
+  <!-- ===== WHY ===== -->
+  <section class="section">
+    <div class="shead">
+      <div class="e">Vì sao nên chọn ✈</div>
+      <div class="big">Thera<br><span class="bl">Studio</span></div>
+      <div class="sub script">phục hồi cho anh?</div>
+    </div>
+    <img class="land win-img" data-aos="zoom-in" src="images/why-window.jpg" alt="Cửa sổ máy bay nhìn ra thành phố và khách gội đầu" data-label="⬚ why-window.jpg → /images" onerror="imgFallback(this)">
+
+    <div class="paincard" data-aos="fade-up">
+      <div class="pc-text">
+        <div class="pc-head"><div class="num">1</div><h4>Áp lực "cơm áo gạo tiền" đè nặng đôi vai</h4></div>
+        <ul>
+          <li>Loay hoay tính toán tiền nong, lãi suất vay mua nhà.</li>
+          <li>Đầu óc lúc nào cũng căng thẳng, mệt mỏi.</li>
+          <li>Ghé "căn hộ 1 ngủ" Thera Studio — không nợ nần, không lãi suất.</li>
+          <li>Trút bỏ gánh nặng, phục hồi tinh thần.</li>
+        </ul>
+        <a class="pc-cta" href="https://30shine.com/booking?phone=0941497708&salonId=0&step=0" target="_blank" rel="noopener"><div class="ci">🏠</div><b>Trút bỏ<br>gánh nặng</b></a>
+      </div>
+      <img class="land pc-photo" src="images/pain-1.jpg" alt="Khách thư giãn cùng nhân viên 30Shine" data-label="⬚ pain-1.jpg" onerror="imgFallback(this)">
+    </div>
+
+    <div class="paincard" data-aos="fade-up">
+      <div class="pc-text">
+        <div class="pc-head"><div class="num">2</div><h4>Thèm một góc riêng tư để được là chính mình</h4></div>
+        <ul>
+          <li>Mệt mỏi vì lúc nào cũng phải tỏ ra mạnh mẽ làm trụ cột.</li>
+          <li>"Trạm sạc" riêng tư với giường massage SL-Tracking 60 chế độ.</li>
+          <li>Phân khu âm thoa êm ái, thư giãn sâu.</li>
+          <li>Thả lỏng hoàn toàn, không bị ai làm phiền.</li>
+        </ul>
+        <a class="pc-cta" href="https://30shine.com/booking?phone=0941497708&salonId=0&step=0" target="_blank" rel="noopener"><div class="ci">🧘</div><b>Được là<br>chính mình</b></a>
+      </div>
+      <img class="land pc-photo" src="images/pain-2.jpg" alt="Massage vai gáy" data-label="⬚ pain-2.jpg" onerror="imgFallback(this)">
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section class="section" style="background:#f6f9fe">
+    <div class="shead" style="margin-bottom:16px">
+      <div class="e" style="letter-spacing:1.5px;text-transform:uppercase">Trải nghiệm 45 phút</div>
+      <div class="big" style="font-size:26px">Hành trình 'sống' trong<br>căn hộ <span class="bl">dịch vụ phục hồi</span> ✈</div>
+    </div>
+    <div class="timeline">
+      <div class="tstep" data-aos="fade-left">
+        <div class="tcol"><div class="time">0–10'</div><div class="buoc">BƯỚC 1</div></div>
+        <div class="tcard"><div class="ico">🔑</div><div><h4>Nhận chìa khóa, bước vào cabin studio 1 ngủ</h4><ul><li>Tạm biệt khói bụi và áp lực tài chính.</li><li>Bước vào căn hộ dịch vụ full nội thất premium.</li><li>Thiết kế riêng tư, ấm áp, thư thái ngay khi mở cửa.</li></ul></div></div>
+      </div>
+      <div class="tstep" data-aos="fade-left" data-aos-delay="80">
+        <div class="tcol"><div class="time">10–25'</div><div class="buoc">BƯỚC 2</div></div>
+        <div class="tcard"><div class="ico">💺</div><div><h4>Giường SL-Tracking nắn bóp toàn thân</h4><ul><li>Thả lỏng toàn thân trên giường SL-Tracking.</li><li>Con lăn miết dọc từ vai gáy xuống thắt lưng và chân.</li><li>Giải phóng cảm giác ách tắc, căng cứng cơ sau 10 tiếng làm việc.</li></ul></div></div>
+      </div>
+      <div class="tstep" data-aos="fade-left" data-aos-delay="160">
+        <div class="tcol"><div class="time">25–38'</div><div class="buoc">BƯỚC 3</div></div>
+        <div class="tcard"><div class="ico">🧖</div><div><h4>Gội Shiatsu &amp; lấy ráy tai âm thoa "1+1"</h4><ul><li>Gội đầu thảo dược đánh bay bết dầu, hút mụn.</li><li>Làm sạch sâu làn da sạm vì nắng nóng.</li><li>Chìm vào giấc ngủ sâu tại khu vực LRT âm thoa, sướng rùng mình.</li></ul></div></div>
+      </div>
+      <div class="tstep" data-aos="fade-left" data-aos-delay="240">
+        <div class="tcol"><div class="time">38–45'</div><div class="buoc">BƯỚC 4</div></div>
+        <div class="tcard"><div class="ico">💈</div><div><h4>"Bàn giao" diện mạo sảng khoái, phong độ</h4><ul><li>Tút tát phong thái tại Grooming Room.</li><li>Stylist căn chỉnh phom tóc gọn gàng lịch lãm.</li><li>Sấy tạo kiểu, bước ra với diện mạo 200% tự tin.</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFFERENCE ===== -->
+  <section class="section">
+    <div class="shead" style="margin-bottom:8px">
+      <div class="e" style="letter-spacing:1.5px;text-transform:uppercase">Sự khác biệt của</div>
+      <div class="big">Thera Studio<br><span class="bl">30Shine?</span></div>
+    </div>
+    <div class="diffwrap">
+    <div class="diffrow" data-aos="fade-up"><img class="land dimg" src="images/diff-1.jpg" alt="Gội đầu" data-label="⬚ diff-1" onerror="imgFallback(this)"><div><div class="dnum">01</div><h4>🔑 Căn hộ riêng tư</h4><ul><li>"Căn hộ phục hồi 1 ngủ" kín đáo, yên tĩnh tuyệt đối.</li><li>Decor sang xịn chuẩn căn hộ serviced cao cấp.</li></ul></div></div>
+    <div class="diffrow" data-aos="fade-up" data-aos-delay="80"><img class="land dimg" src="images/diff-2.jpg" alt="Ghế massage" data-label="⬚ diff-2" onerror="imgFallback(this)"><div><div class="dnum">02</div><h4>🛋️ Giường SL-Tracking</h4><ul><li>Giường thư giãn cơ thông minh 60 chế độ.</li><li>Tự động miết dọc thắt lưng, đả thông kinh mạch xua mỏi vai gáy.</li></ul></div></div>
+    <div class="diffrow" data-aos="fade-up" data-aos-delay="160"><img class="land dimg" src="images/diff-3.jpg" alt="Khách thư giãn" data-label="⬚ diff-3" onerror="imgFallback(this)"><div><div class="dnum">03</div><h4>🧘 Trị liệu âm thanh</h4><ul><li>Phân khu "1+1" lấy ráy tai âm thoa.</li><li>Tiếng động êm ái, đánh thức dây thần kinh phế vị giúp ngủ ngon.</li></ul></div></div>
+    <div class="diffrow" data-aos="fade-up" data-aos-delay="240"><img class="land dimg" src="images/diff-4.jpg" alt="Tạo kiểu" data-label="⬚ diff-4" onerror="imgFallback(this)"><div><div class="dnum">04</div><h4>💳 Tạm biệt áp lực cuộc sống</h4><ul><li>Tận hưởng tiện ích luxury.</li><li>Được là chính mình mà không bị ai làm phiền.</li></ul></div></div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" style="background:#f6f9fe" id="faq">
+    <div class="faqbubble">💬</div>
+    <div class="shead" style="margin-bottom:4px">
+      <div class="e" style="letter-spacing:1.5px;text-transform:uppercase">Hỏi đáp</div>
+      <div class="big" style="font-size:28px">Câu hỏi thường gặp</div>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin:6px 0 16px">Giải đáp nhanh những thắc mắc về căn hộ phục hồi Thera Studio tại 30Shine.</p>
+
+    <details class="faq" open data-aos="fade-up"><summary><span class="q">Q1</span><span class="qt">Thera Studio khác gì so với gội đầu massage thông thường?</span><span class="pm"></span></summary><div class="body" style="padding-top:8px"><p style="font-size:13.5px;color:var(--muted);line-height:1.6">Anh sẽ được trải nghiệm trong cabin đơn riêng tư cao cấp (Studio 1 ngủ), trị liệu lưng vai gáy sâu bằng giường SL-Tracking thông minh và thư giãn thính giác bằng âm thoa LRT.</p></div></details>
+
+    <details class="faq" data-aos="fade-up" data-aos-delay="80"><summary><span class="q">Q2</span><span class="qt">Giường massage SL-Tracking có phù hợp với người bị đau lưng không?</span><span class="pm"></span></summary><div class="body" style="padding-top:8px"><p style="font-size:13.5px;color:var(--muted);line-height:1.6">Rất phù hợp ạ. Con lăn 4D tự động dò tìm huyệt đạo dọc cột sống và xoa bóp nhẹ nhàng, giúp giải phóng hoàn toàn các vùng cơ căng cứng do ngồi văn phòng lâu.</p></div></details>
+
+    <details class="faq" data-aos="fade-up" data-aos-delay="160"><summary><span class="q">Q3</span><span class="qt">Thera Studio có ở những salon nào của 30Shine?</span><span class="pm"></span></summary><div class="body" style="padding-top:8px"><p style="font-size:13.5px;color:var(--muted);line-height:1.6">Hiện tại căn hộ Thera Studio có mặt tại —<br><b>Hà Nội:</b><br>10 Trần Phú (Hà Đông),<br>168 Nguyễn Văn Cừ (Long Biên).<br><b>TP.HCM:</b><br>103 Trần Não (Q2),<br>927 Hậu Giang (Q6),<br>237 Nguyễn Thị Thập (Q7),<br>12 Lê Đức Thọ (Gò Vấp),<br>25 Tôn Đản (Q4),<br>1180 Quang Trung (Gò Vấp).</p></div></details>
+  </section>
+
+  <div class="note">⚠ Bản draft — mọi ô [ảnh] là placeholder cần thay hình thật. Nội dung &amp; giá 125.000đ lấy đúng theo file/Figma bạn gửi.</div>
+  <div class="spacer"></div>
+
+  <!-- ===== STICKY BOTTOM ===== -->
+  <div class="sticky">
+    <a href="tel:1900272703" class="btn btn-soft"><span class="l1">📞 GỌI HOTLINE</span><span class="l2">1900.272.703</span></a>
+    <a href="https://30shine.com/booking?phone=0941497708&salonId=0&step=0" target="_blank" rel="noopener" class="btn btn-navy pulse"><span class="l1">Trải nghiệm chỉ 45 phút</span><span class="l2">ĐẶT LỊCH NGAY 📅</span></a>
+  </div>
+
+</div>
+
+<!-- POPUP ĐĂNG NHẬP -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal">
+    <button class="x" onclick="closeLogin()">✕</button>
+    <h3>ĐĂNG NHẬP</h3>
+    <div class="ask">Số điện thoại của anh là gì ạ?</div>
+    <input type="tel" id="loginPhone" placeholder="Ví dụ: 0912.xxx.xxx" onkeydown="if(event.key==='Enter')loginContinue()">
+    <button class="btn-continue" onclick="loginContinue()">TIẾP TỤC</button>
+  </div>
+</div>
+
+<!-- AOS: thư viện hiệu ứng cuộn -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Ảnh thiếu file → hiện khung placeholder gọn thay vì icon "vỡ"
+  function imgFallback(el){
+    var d=document.createElement('div');
+    d.className=el.className.replace('land','').trim()+' img-missing';
+    d.textContent=el.getAttribute('data-label')||el.alt||'Ảnh';
+    el.replaceWith(d);
+  }
+  // Khởi tạo hiệu ứng cuộn
+  if(window.AOS){AOS.init({duration:700,easing:'ease-out-cubic',once:true,offset:60});}
+
+  // Popup đăng nhập
+  function openLogin(){var m=document.getElementById('loginModal');m.classList.add('show');setTimeout(function(){var i=document.getElementById('loginPhone');if(i)i.focus();},60);}
+  function closeLogin(){document.getElementById('loginModal').classList.remove('show');}
+  function loginContinue(){
+    var p=(document.getElementById('loginPhone').value||'').replace(/[^0-9]/g,'');
+    if(p.length<9){alert('Anh nhập giúp em số điện thoại nhé ạ!');return;}
+    window.open('https://30shine.com/booking?phone='+p+'&salonId=0&step=0','_blank');
+    closeLogin();
+  }
+  // đóng khi bấm nền tối hoặc phím Esc
+  document.addEventListener('click',function(e){var m=document.getElementById('loginModal');if(e.target===m)closeLogin();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLogin();});
+</script>
+</body>
+</html>
